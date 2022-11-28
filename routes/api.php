@@ -41,6 +41,7 @@ Route::get('/db_seed', function () {
     \Illuminate\Support\Facades\Artisan::call('config:clear');
     \Illuminate\Support\Facades\Artisan::call('db:seed');
     return 'success';
+
 });
 
 Route::prefix('auth/admin')->middleware('auth:admin')->group(function (){
