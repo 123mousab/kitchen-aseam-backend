@@ -17,6 +17,9 @@ use Spatie\Permission\Models\Role;
 
 class AuthController extends Controller
 {
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function index()
     {
         $items = Admin::query()->orderByDesc('id')->paginate(10);
